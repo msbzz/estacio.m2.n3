@@ -3,266 +3,470 @@
 
 ## Descrição
 
-  Projeto dividido em procedimentos no qual é experimentado diversas formas de utilização do Java Script no lado cliente,
-   
-  O procedimento 1 trata-se de uma pagina de uma pagina de comparação entre algoritmos de ordenação. 
-  
-  Os procedimentos 2 e 3 são sobre leitura e apresentação de dados que estarão se completando no final ou seja, no procedimento 3. 
-  
-  
- 
+  Criação de front-end web com base em React JS ou Next JS, com utilização de bases de teste JSON, em memória, para ambas as plataformas.
+
+  Projeto dividido em procedimentos no qual os dois primeiros são desenvolvidos em react se complementam. O ultimo é um projeto nextjs
+     
+  A partir dos objetivos listados abaixo, foram criadas duas versões de um front-end web, com base nas tecnologias React JS e Next JS,
+onde foi possível lidar com contextos reais de aplicação das tecnologias abordadas:
+
+Explorar a sintaxe Type Script na implementação de entidades e controladores, para projetos React JS e Next JS;
+
+Criar um front-end para Web completo, baseado em componentesreutilizáveis, através do React JS;
+
+Criar um front-end para Web completo, baseado em componentes reutilizáveis, através do Next JS;
+
+Utilizar o Next JS para a definição de uma API no estilo REST, de uso interno, com acesso via função fetch, oferecida no ambiente padrão do Java Script. 
+
 ## Funcionalidades
  
- 👉 1º Procedimento | Ordenando com Java Script e DOM
+  
+👉 1º Procedimento | Listagem de Livros no React JS
 
-Crie um diretório com o nome "exemplosjs" e abra o Visual Studio Code;
-Crie um arquivo com o nome "ordenando.js", no ambiente de edição;
-Modifique o conteúdo do arquivo com a definição das seguintes funções,
-todas criadas no padrão Arrow Function:
-    a) Função swap, com o objetivo de trocar os valores de duas posições de um
-vetor, tendo como parâmetros de entrada o vetor e as posições
+Crie o projeto e inicie o ambiente de desenvolvimento:
+    a) Abrir a linha de comandos
 
-    b) Função shuffle, com o objetivo de embaralhar os elementos de um vetor,
-tendo como parâmetros de entrada o vetor e a quantidade de trocas
+    b) Executar npx create-react-app livros-react --template typescript
 
-    c) Função bubble_sort, para ordenar um vetor de inteiros com o algoritmo
-Bubble Sort, tendo como parâmetro de entrada o vetor de inteiros
+    c) Entrar no diretório do projeto criado, executando cd livros-react
 
-    d) Função selection_sort, para ordenar um vetor de inteiros utilizando o
-algoritmo Selection Sort, tendo como parâmetro de entrada o vetor de valores
-inteiros
+    d) Abrir o Visual Studio Code, executando code .\
 
-    e) Função quick_sort, para ordenar um vetor de inteiros com o algoritmo
-Quick Sort, recursivo, tendo como parâmetros o vetor, posição inicial e posição
-final
+No ambiente de desenvolvimento do Visual Studio Code, criar a estrutura
+básica do projeto:
+    a) Adicionar um folder com o nome modelo
 
- f) Função particionamento, de apoio a quick_sort, tendo como parâmetros o
-vetor, posição inicial, posição final e valor do pivot
+    b) Criar, no folder modelo, os arquivos "Editora.ts" e "Livro.ts" (TypeScript)
 
-Crie uma página com o nome "ordenando.html", no ambiente de edição;
-Defina a estrutura básica da página, digitando "html" seguindo de CTRL +
-Espaço, e selecionando a opção HTML: 5;
+    c) Adicionar um folder com o nome controle
 
-![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/7bfc3ab9-01f4-4a2d-941b-0df492436cb1)
+    d) Criar, no folder controle, "ControleEditora.ts" e "ControleLivros.ts"
+
+    e) Incluir as dependências do Bootstrap no arquivo index.html, encontrado
+no folder public
+
+    f) Criar os arquivos "LivroDados.js" e "LivroLista.js" (JavaScript) em src
+
+A estrutura do projeto deverá ficar como o exemplo abaixo:
+
+![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/85847e7c-8125-4a74-89e8-6211a97df65f)
 
 
-Modifique o conteúdo do arquivo para obter as seguintes características:
-    a) Alterar a linguagem para pt-br
+Codifique as entidades do sistema (Editora e Livro):
+    a) No arquivo Editora.ts, criar a classe Editora, com os campos codEditora,
+numérico, e nome, do tipo texto
 
-    b) Incluir a biblioteca ordenando.js em uma tag script
+    b) No arquivo Livro.ts, criar a classe Livro, composta dos campos: codigo e
+codEditora, numéricos, título e resumo, ambos do tipo texto, e autores, como
+um vetor de texto
 
-    c) Definir um campo de entrada numérico, com o id valor
+Codifique o controlador de editoras, no arquivo ControleEditora.ts:
+    a) Importar a classe Editora
 
-    d) Adicionar um botão com texto Adicionar, efetuando a chamada para uma
-função de nome add no clique
+    b) Definir a variável editoras, como Array<Editora>, contendo ao menos três
+elementos, no formato JSON
 
-    e) Definir um campo de seleção com as opções Blubble Sort, Selection Sort e
-Quick Sort, com Bubble Sort selecionado por padrão
+    c) Criar a classe ControleEditora, contendo os métodos getNomeEditora e
+getEditoras
 
-    f) Adicionar um botão com o texto Ordenar, chamando a função ordenar
+    d) Implementar o método getEditoras, com o retorno do vetor editoras
 
-    g) Adicionar um botão com o texto Misturar, chamando a função misturar
+    e) Implementar o método getNomeEditora, recebendo codEditora, do tipo
+numérico, e retornando o nome da editora, através de uma operação filter
+sobre o vetor editoras
 
-    h) Definir uma lista (ul) com id valores, sem opções internas
+Codifique o controlador de livros, no arquivo ControleLivros.ts:
+    a) Importar a classe Livro
 
-    i) Definir um trecho script, com as funções add, ordenar e misturar, todas no
-estilo clássico de escrita do Java Script e sem parâmetros
+    b) Definir a variável livros, como Array<Livro>, contendo ao menos três
+elementos, no formato JSON
 
-Implemente a função add, para adicionar o valor digitado no campo de
-entrada à lista de valores, de acordo com os passos seguintes:
-    a) Capturar o campo de entrada com id valor via getElementById
+    c) Criar a classe ControleLivro, contendo os métodos obterLivros, incluir e
+excluir
 
-    b) Capturar a lista com id valores
+    d) Implementar o método obterLivros, com o retorno do vetor livros
 
-    c) Criar uma variável node, com um elemento li definido via createElement
+    e) Implementar o método incluir, recebendo um objeto do tipo Livro, que terá
+o código trocado pelo código mais alto do vetor, incrementado de um, e depois
+será adicionado ao vetor
 
-    d) Definir um nó de texto, com o valor do campo de entrada, e incluí-lo como
-filho de node
+    f) Implementar o método excluir, recebendo um código numérico, que irá
+encontrar o índice do livro com o código fornecido, através de findIndex, e
+removê-lo com o uso de splice
 
-    e) Adicionar o elemento node à lista valores
+Codifique o componente LivroLista, no arquivo LivroLista.js:
+    a) Instanciar um controlador de livros, com o nome controleLivro, e um de
+editoras, com o nome controleEditora
 
-Implemente a função ordenar, para a ordenação da lista de valores, de acordo
-com os passos apresentados a seguir:
-    a) Capturar a lista de valores e a lista de seleção via getElementById
+    b) Definir o componente auxiliar LinhaLivro, com parâmetro props, para a
+recepção dos atributos livro e excluir, a partir da aplicação do seletor
 
-    b) Através do atributo children, obter cada nó da lista de valores e adicionar
-o conteúdo do item, convertido para inteiro, em um vetor
+    c) Definir em LinhaLivro o atributo nomeEditora, invocando o método
+getNomeEditora, com a passagem de codEditora, atributo do livro
 
-    c) Os conteúdos podem ser obtidos via innerHTML e convertidos com eval
+    d) No retorno do componente, deverá ser fornecida uma linha de tabela, ou
+tr, com os valores dos atributos do livro nas tags td
 
-    d) Escolher o algoritmo de ordenação adequado, a partir do selectedIndex da
-lista de seleção, e aplicar ao vetor
+    e) Abaixo do título, na primeira célula, adicionar um botão de exclusão, com
+o recebimento de um método que será fornecido no atributo excluir
 
-    e) Utilizar os operadores map e reduce, do vetor, para gerar os novos itens
-da lista de valores, substituindo o conteúdo da lista via innerHTML
+    f) Exibir os autores como uma lista HTML, efetuando a geração dos itens
+através do método map, e tendo como key o valor de index
 
-Implemente a função misturar, para embaralhar os valores da lista, de acordo
-com os passos apresentados a seguir:
-    a) Capturar a lista de valores via getElementById
+    g) Definir o componente LivroLista, exportado por padrão, sem parâmetros
 
-    b) Através do atributo children, obter cada nó da lista de valores e adicionar
-o conteúdo do item, convertido para inteiro, em um vetor
+    h) Em LivroLista, definir as propriedades livros, do tipo vetor, e carregado,
+booleana, através de useState
 
-    c) Os conteúdos podem ser obtidos via innerHTML e convertidos com eval
+    i) Utilizar o Hook useEffect, que deve alimentar livros com a chamada para
+obterLivros, do controlador, e alterar carregado para true, tendo ainda como
+balizador o atributo carregado
 
-    d) Aplicar a função shuffle ao vetor
+    j) Acrescentar o método excluir, estilo arrow function, que deve receber o
+código do livro, invocar o método excluir do controlador, e setar o valor de
+carregado como false, para forçar o redesenho da página
 
-    e) Utilizar os operadores map e reduce, do vetor, para gerar os novos itens
-da lista de valores, substituindo o conteúdo da lista via innerHTML
+    k) No retorno do componente deve ser fornecida a área principal (main),
+contendo o título da página e uma tabela para exibição dos livros
+
+    l) Utilizar o método map, de livros, para a geração das linhas de dados como
+componentes do tipo LinhaLivro, tendo como parâmetros o livro atual do vetor,
+excluir invocando o método excluir de LivroLista, com a passagem do código do
+livro corrente, e key associado ao código do livro
+
+Altere o arquivo App.tsx, retornando em App o componente LivroLista;
+Ajuste as características para obter uma página como o exemplo abaixo:
+
+![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/abd4aeb8-1f89-45a0-9a35-e0da0e662613)
+
+
+Verifique os resultados obtidos através de um navegador, lembrando de testar
+a funcionalidade da exclusão de livro.
+
+👉 2º Procedimento | Página de Cadastro e Navegação no React JS
+
+Ajuste as rotas de navegação do sistema livros-react:
+    a) Adicionar o pacote de navegação com npm instal react-router-dom
+
+    b) Definir o componente LivroDados, em LivroDados.js, inicialmente com o
+retorno de uma tag main e uma mensagem de "Olá mundo", devendo ser
+exportado por padrão
+
+    c) Alterar o arquivo App.tsx, com a adição das rotas e menu de navegação
+
+    d) No retorno do componente deve ser fornecido um BrowserRouter, onde as
+rotas, na divisão Routes, serão a raiz, apontando para LivroLista, e dados,
+apontando para LivroDados
+
+    e) Precedendo a divisão Routes, definir o menu de navegação, com tag nav,
+formatado pelo BootStrap, e utilizar elementos do tipo Link, no lugar das
+âncoras, para acesso às rotas definidas
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 
-![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/e3a73449-f565-4eef-9448-cbabc3e0b6b6)
+![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/ab798b7a-7dba-4607-be4f-7db29a4b121c)
 
 
-Por fim, verifique os resultados obtidos através de um navegador.
-👉 2º Procedimento | Página de Receitas Dinâmica
+Implemente o componente LivroDados, no arquivo LivroDados.js:
+    a) Instanciar um controlador de livros, com o nome controleLivro, e um de
+editoras, com o nome controleEditora
 
-Crie uma página com o nome "receitas.html", no ambiente de edição;
-Defina a estrutura básica da página, digitando html seguido de CTRL +
-Espaço, e selecionando a opção HTML:5;
-Modifique o conteúdo do arquivo para obter as seguintes características:
-    a) Alterar a linguagem para pt-br
+    b) Em LivroDados, definir o vetor opcoes, invocando o método getEditoras,
+com o mapeamento de codEditora para value e nome para text
 
-    b) Incluir a folha de estilos do Bootstrap
+    c) Definir as propriedades titulo, resumo e autores, todas de texto, através
+de useState, além de codEditora, iniciada com a posição zero de opcoes
 
-    c) Incluir o título "Catálogo de Receitas"
+    d) Acrescentar o atributo navigate, recebendo o Hook useNavigate
 
-    d) Definir a área principal como container-fluid
+    e) Definir o método tratarCombo, tendo o evento como parâmetro, onde
+deve ocorrer a chamada para setCodEditora, com a passagem do value de uma
+combo de seleção (target do evento) convertido para number
 
-    e) Utilizar fundo bg-warning
+    f) Definir o método incluir, com a recepção de um evento, que primeiro deve
+eliminar o comportamento padrão com preventDefault, em seguida instanciar
+um livro com código valendo zero, o valor das propriedades de estado, e
+autores separados por linha (split), invocar o método incluir do controlador de
+livros, e navegar para a página de listagem, na raiz
 
-    f) Definir uma div com apresentação no modo flex-wrap, identificada como
-pnlCatalogo, para apresentação dos painéis para as receitas
+    g) No retorno do componente deve ser fornecida a área principal (main),
+contendo o título da página e um formulário para inclusão do livro, sendo
+composto dos campos referentes às propriedades de estado, com ligação
+através de value e onChange
 
-    g) Acrescentar um trecho em Java Script
+    h) Utilizar uma lista de seleção (combo) para as editoras, com as opções
+geradas pelo método map, de opcoes, e associando onChange ao método
+tratarCombo
 
-    h) Organizar os dados de receitas em um vetor de elementos JSON, com os
-campos título, imagem, preparo e ingredientes, onde este último é um vetor de
-elementos texto
-
-    i) Definir as funções getListaIngredientes e getCard, ambos com parâmetro
-receita, relacionados à estrutura adotada no segmento JSON
-
-    j) Definir a função preencheCatalogo, sem parâmetros, invocada no evento
-onload do elemento body
-
-Acrescente as imagens das receitas, preferencialmente no formato PNG, para
-posterior exibição nos painéis;
-Implemente a função getListaIngredientes, para geração da lista em HTML:
-    a) Iniciar a lista em uma variável texto com a tag ul
-
-    b) Utilizar map e reduce, sobre o campo ingredientes da receita, para obter
-a representação como itens de lista, baseados na tag li, concatenando na
-variável de texto
-
-    c) Finalizar concatenando o fechamento de ul e retornando a lista HTML
-
-Implemente a função getCard, para geração do painel da receita:
-    a) Utilizar substituição direta, com o texto entre sinais de crase
-
-    b) Definir, no texto de retorno, uma div com classe card e largura de 250px
-
-    c) Incluir uma imagem, com a classe card-img-top, tendo como origem o
-campo imagem da receita
-
-    d) Incluir uma div com classe card-body, referente ao corpo do painel
-
-    e) Adicionar um título ao corpo, utilizando o campo titulo da receita, e classe
-card-title para formatação
-
-    f) Adicionar uma div com classe card-text ao corpo, apresentando a lista de
-ingredientes, obtida via getListaIngredientes, um separador hr e texto do
-campo preparo da receita
-
-Implemente a função preencheCatalogo, para exibição do conjunto de
-receitas na página, ao nível da div pnlCatalogo
-    a) Capturar o elemento pnlCatalogo através de getElementById
-
-    b) Através de map e reduce, obter o texto HTML para os painéis de receita,
-formatados com base na função getCard, a partir do vetor JSON
-
-    c) Alterar o innerHTML de pnlCatalogo para o texto HTML gerado
+    i) Relacionar o evento onSubmit, do formulário, ao método incluir, além de
+adicionar um botão de submissão ao final
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 
- ![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/f84bc9fd-d74c-49ab-a9ef-5e1ad455d870)
+![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/62e0bf92-b92b-45cb-916c-3c0d31a3e915)
 
 
-Por fim, verifique os resultados obtidos através de um navegador.
+Verifique os resultados obtidos através de um navegador, lembrando de testar
+a nova funcionalidade de inclusão de livros.
 
-👉 3º Procedimento | Transmissão de Dados e VUE JS
+👉 3º Procedimento | Criação do Aplicativo com Next JS
 
-Acesse o endereço de teste REST https://reqres.in/api/users?per_page=10, e
-observar os dados que são retornados no formato JSON
-Crie uma página com o nome "usuarios.html", no ambiente de edição;
-Defina a estrutura básica da página, digitando html seguido de CTRL +
-Espaço, e selecionando a opção HTML:5;
-Modifique o conteúdo do arquivo para obter as seguintes características:
-    a) Alterar a linguagem para pt-br
+Crie o aplicativo e configure o ambiente:
+    a) Executar o comando npx create-next-app livros-next  --typescript
 
-    b) Incluir a folha de estilos do Bootstrap
+    b) Entrar no diretório do projeto criado, executando cd livros-next
 
-    c) Incluir a biblioteca Java Script do VUE JS
+    c) Abrir o Visual Studio Code, executando code .\
 
-    d) Se necessário, incluir a biblioteca Java Script do JQuery
+    d) No ambiente de edição, criar um diretório (folder) com o nome classes, e
+copiar os diretórios modelo e controle, do projeto livros-react, com seus
+respectivos arquivos Type Script, para dentro do novo diretório
 
-    e) Aplicar as classes container e bg-warning ao body
+    e) Criar o diretório componentes, e dentro dele adicionar os arquivos para
+componentes auxiliares, com os nomes "LinhaLivro.tsx" e "Menu.tsx"
 
-    f) Definir um título h1 com o texto "Usuários de Teste via REST"
+    f) No diretório pages/api, criar os diretórios com os nomes editoras e livros
 
-    g) Acrescentar uma referência ao site reqres.in, responsável por fornecer os
-dados de teste, no formato JSON, de forma gratuita
+    g) No diretório editoras, criar os arquivos "[codEditora].ts" e "index.ts"
 
-    h) Incluir uma div com a identificação usuarios e classe CSS container-fluid
+    h) No diretório livros, criar os arquivos "[codigo].ts" e "index.ts"
 
-    i) Na div de usuários incluir uma div com a classe row, representando uma
-linha de exibição para os painéis de usuários
+A estrutura do projeto deverá ficar como o exemplo abaixo:
 
-    j) No corpo da segunda div, acrescentar uma div para o painel de usuário,
-formatada como card, exibição em 3 colunas, espaçamento interno p-2 e
-tamanho da margem como m-3
+![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/4d95f30d-ded4-45c4-9f0d-691d3645a288)
 
-    k) Acrescentar um atributo de repetição v-for, do VUE JS, baseado na regra
-(user,index) in users, e um atributo :key, relacionado ao index
 
-    l) No interior do card, definir uma imagem, formatada como card-img-top,
-tendo a origem definida via :src, do VUE JS, com valor user.avatar
+Implemente a API de gerenciamento de editoras via HTTP:
+    a) Codificar o arquivo index.ts, no diretório pages/api/editoras, iniciando
+com a definição de uma instância exportável de ControleEditora, com o nome
+controleEditora
 
-    m) Definir uma div para o corpo do painel, formatado como card-body
+   b) Definir a assinatura para tratamento das solicitações, cujo formato deve
+ser export default (req: NextApiRequest, res: NextApiResponse) => { }
 
-    n) Acrescentar um título ao corpo do painel, formatado como card-title, e
-usando os valores {{user.first_name}} e {{user.last_name}}
+    c) Implementar o tratamento de requisições, respondendo no método GET
+com status 200 e o vetor de editoras, obtido via método getEditoras, de
+controleEditoras, no formato JSON
 
-    o) Acrescentar um parágrafo ao corpo do painel, formatado como card-text,
-tendo com conteúdo {{user.email}}
+    d) Tratar os status 405, para método não permitido, e 500, para exceção
+ocorrida no servidor
 
-    p) Definir um trecho Java Script para a definição do objeto VUE JS
+    e) Codificar o arquivo [codEditora].ts, no diretório pages/api/editoras
 
-Implemente o objeto de controle VUE JS:
-    a) Definir um objeto app, do tipo Vue
+    f) Importar o controlador de editoras instanciado em index.ts, utilizando o
+comando import {controleEditora} from '.'
 
-    b) Configurar o elemento alvo (el) como #usuarios, relacionado ao painel
-principal, utilizado como container
+    g) Definir a assinatura para tratamento das solicitações, cujo formato deve
+ser export default (req: NextApiRequest, res: NextApiResponse) => { }
 
-    c) Configurar o atributo de dados (data) como uma função retornando o vetor
-users, inicialmente vazio
+    h) Implementar o tratamento de requisições, respondendo no método GET
+com status 200 e um objeto JSON com o nome da editora, obtido através de
+getNomeEditora, tendo como parâmetro codEditora, fornecido na URL de
+acesso e recuperado via req.query, convertido para number
 
-    d) Configurar o evento mounted, com a chamada para loadUsers, visando o
-preenchimento do vetor users, utilizado como fonte de dados e na regra de
-repetição para os painéis
+    i) Tratar os status 405, para método não permitido, e 500, para exceção
+ocorrida no servidor
 
-    e) Configurar o atributo methods, contendo a função loadUsers
+Teste a nova API
+    a) Iniciar a execução do aplicativo através do comando npm run dev
 
-    f) Implementar a função loadUsers para preenchimento do vetor users com
-os dados JSON fornecidos por https://reqres.in/api/users?per_page=10,
-podendo ser utilizado JQuery AJAX, XMLHttpRequest ou Fetch API
+    b) Abrir o endereço http://localhost:3000/api/editoras no navegador
+
+    c) Abrir o endereço http://localhost:3000/api/editoras/3 no navegador
+
+Os resultados obtidos devem ser os que são apresentados a seguir:
+
+![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/a771918b-b4c5-4c9c-8ea0-82d8e21c2950)
+
+Implemente a API de gerenciamento de editoras via HTTP:
+    a) Codificar o arquivo index.ts, no diretório pages/api/livros, iniciando com a
+definição de uma instância exportável de ControleLivro, utilizando o nome
+controleLivro
+
+    b) Definir a assinatura para tratamento das solicitações, cujo formato deve
+ser export default (req: NextApiRequest, res: NextApiResponse) => { }
+
+    c) Implementar o tratamento de requisições, respondendo no método GET
+com status 200 e o vetor de livros, obtido via método obterLivros, de
+controleLivro, no formato JSON
+
+    d) Responder ao método POST com a captura dos dados do livro, fornecido
+no corpo da requisição, no formato JSON, a partir de req.body, inclusão no
+vetor de livros via método incluir, de controleLivros, e retorno para o chamador
+com status 200 e mensagem de sucesso no formato JSON
+
+    e) Tratar os status 405, para método não permitido, e 500, para exceção
+ocorrida no servidor
+
+    f) Codificar o arquivo [codigo].ts, no diretório pages/api/livros
+
+    g) Importar o controlador de livros instanciado em index.ts, utilizando o
+comando import {controleLivro} from '.'
+
+    h) Definir a assinatura para tratamento das solicitações, cujo formato deve
+ser export default (req: NextApiRequest, res: NextApiResponse) => { }
+
+    i) Implementar o tratamento de requisições, respondendo ao DELETE com a
+captura do código fornecido na URL, via req.query, exclusão do livro no vetor,
+via método excluir de controleLivro, e retorno ao chamador com status 200 e
+mensagem de sucesso no formato JSON
+
+    j) Tratar os status 405, para método não permitido, e 500, para exceção
+ocorrida no servidor
+
+Teste a nova API, efetuando uma consulta no navegador a partir do endereço
+http://localhost:3000/api/livros, onde deve ser retornado o vetor de livros
+no formato JSON, e opcionalmente testar os demais métodos (POST e
+DELETE) via Postman, Boomerang, ou outra ferramenta para envio de
+requisições
+Habilite o Bootstrap no aplicativo Next JS:
+    a) Parar o aplicativo livros-next, caso esteja em execução, e executar o
+comando npm install bootstrap
+
+    b) Alterar o conteúdo de _app.tsx para o que é apresentado a seguir, com a
+importação da folha de estilo do Bootstrap, deixando-a disponível para todos os
+componentes
+
+![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/a46f38fe-28c1-469e-a36c-5b8588be6dff)
+
+Implemente o componente LinhaLivro, no arquivo LinhaLivro.tsx:
+    a) Iniciar com a definição de uma instância de ControleEditora, com o nome
+controleEditora, utilizado internamente para diminuir a quantidade de
+chamadas assíncronas, já que os dados de editoras não são dinâmicos
+
+    b) Definir a interface LinhaLivroProps, com o atributo livro, do tipo Livro, e
+método excluir(), do tipo void
+
+    c) Definir o componente exportável LinhaLivro, com parâmetro props, para a
+recepção dos atributos livro e excluir, a partir do seletor, utilizando export
+const LinhaLivro: React.FC<LinhaLivroProps> = (props) => { }
+
+    d) Copiar o corpo da função LinhaLivro, encontrada no arquivo LivroLista.js,
+do projeto livros-react, para o corpo da nova função, o que se justifica pelo fato
+de que apenas a assinatura é modificada para uso no Next JS
+
+Crie o arquivo LivroLista.tsx, no diretório pages, com o conteúdo seguinte:
+
+ ![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/9d231ab3-e7f2-444e-bb44-2928ae7e0377)
+ 
+Implemente o componente Menu.tsx, de acordo com as instruções seguintes:
+    a) Definir o componente com export const Menu: React.FC = () => { }
+
+    b) Retornar o menu de navegação, com tag nav, formatado pelo BootStrap
+
+    c) Utilizar elementos do tipo Link, da biblioteca next/link
+
+    d) Através do atributo href, de Link, fornecer acesso para as páginas index,
+LivroLista e LivroDados, como opções do menu de navegação
+
+Altere o componente Home, no arquivo index.tsx:
+    a) No retorno, manter a div inicial, com classe CSS container
+
+    b) No componente Head, alterar title para "Loja Next"
+
+    c) Acrescentar um componente Menu após Head
+
+    d) Após o menu, definir a área principal (main), com estilo styles.main, e
+dentro dela criar um título h1, com estilo styles.title e texto Página Inicial
+
+    e) Apagar todo o restante da página original
 
 Ajuste as características para obter uma página como o exemplo abaixo:
+ 
+ ![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/414fc266-8767-4612-9f95-c1bf68881a1a)
 
-![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/5ef6db22-f75a-47c2-823a-15d18b70b613)
+ 
+Implemente o componente LivroLista, no arquivo LivroLista.tsx:
+    a) Importar os estilos com import styles from '../styles/Home.module.css'
 
+    b) Definir uma constante com o nome baseURL, do tipo texto, utilizando o
+valor "http://localhost:3000/api/livros"
 
+    c) Criar a função obter, assíncrona, no estilo arrow function, com a chamada
+para baseURL, via fetch, e retorno da resposta no formato JSON
+
+    d) Criar a função excluirLivro, assíncrona, no estilo arrow function, tendo o
+parâmetro codigo, numérico, com a chamada para baseURL/codigo via fetch,
+no modo DELETE, e retorno do campo ok da resposta, indicando sucesso ou
+falha
+
+    e) Em LivroLista, definir as propriedades livros, do tipo Array<Livro>, e
+carregado, booleana, através de useState
+
+    f) Utilizar o Hook useEffect, que deve efetuar a chamada para obterLivros,
+assíncrona, alimentando a propriedade de estado livros no retorno, via operador
+then, e alterar carregado para true, tendo ainda como balizador o atributo
+carregado
+
+    g) Acrescentar o método excluir, estilo arrow function, que deve receber o
+código do livro, invocar a função excluir, assíncrona, e no retorno setar o valor
+de carregado como false, para forçar o redesenho da página
+
+    h) No retorno do componente deve ser fornecida uma div, formatada com
+styles.container, e dentro dela um componente Head, equivalente ao que foi
+utilizado na página Home, um componente Menu, e a área main, contendo o
+título da página e uma tabela para exibição dos livros
+
+    i) Utilizar o método map, de livros, para a geração das linhas de dados como
+componentes do tipo LinhaLivro, tendo como parâmetros o livro atual do vetor,
+excluir invocando o método excluir de LivroLista, com a passagem do código do
+livro corrente, e key associado ao código do livro
+
+Implemente o componente LivroDados, no arquivo LivroDados.tsx
+    a) Importar os estilos com import styles from '../styles/Home.module.css'
+
+    b) Definir um objeto do tipo ControleEditora, com o nome controleEditora
+
+    c) Definir uma constante com o nome baseURL, do tipo texto, utilizando o
+valor "http://localhost:3000/api/livros"
+
+    d) Criar a função incluirLivro, assíncrona, no estilo arrow function, tendo o
+parâmetro livro, do tipo Livro, com a chamada para baseURL via fetch, no
+modo POST, incluindo o tipo de conteúdo como informação do header e o livro
+no body, convertido com JSON.stringfy. O retorno da função será o campo ok
+da resposta, indicando sucesso ou falha
+
+    e) Em LivroDados, definir o vetor opcoes, invocando o método getEditoras,
+com o mapeamento de codEditora para value e nome para text
+
+    f) Definir as propriedades titulo, resumo e autores, todas de texto, através
+de useState, além de codEditora, iniciada com a posição zero de opcoes
+
+    g) Acrescentar o atributo navigate, recebendo o Hook useNavigate
+
+    h) Definir o método tratarCombo, tendo como parâmetro o evento, do tipo
+React.ChageEvent<HTMLSelectElement>, onde deve ocorrer a chamada para
+setCodEditora, passando value, da lista, convertido para number
+
+    i) Definir o método incluir, apresentando como parâmetro um evento do tipo
+React.FormEvent<HTMLFormElement>, que primeiro deve eliminar o
+comportamento padrão com preventDefault, em seguida instanciar um livro
+com código valendo zero, o valor das propriedades de estado, e autores
+separados por linha (split), invocar a função incluir, assíncrona, e, no retorno
+dela, navegar para a página LivroLista, através do sistema de navegação do
+Next JS, com a chamada para Router.push
+
+    j) No retorno do componente deve ser fornecida uma div, formatada com
+styles.container, e dentro dela um componente Head, equivalente ao que foi
+utilizado na página Home, um componente Menu, e a área main, contendo o
+título da página e o formulário para inclusão do livro
+
+    k) Implementar o formulário referente aos campos utilizados para definir as
+propriedades de estado, com ligação através de value e onChange
+
+    l) Utilizar uma lista de seleção (combo) para as editoras, com as opções
+geradas pelo método map, de opcoes, e associando onChange ao método
+tratarCombo
+
+    m) Relacionar o evento onSubmit, do formulário, ao método incluir, além de
+adicionar um botão de submissão ao final
+
+A execução do projeto deverá fornecer as mesmas funcionalidades de livro-
+react, bem como aparência muito similar, mas agora com o gerenciamento da
+base de livros a partir da API interna, acessada de forma assíncrona, via
+fetch;
+Verifique os resultados obtidos através de um navegador.
+ 
 ## Pré-requisitos
 Antes de iniciar, verifique se você possui os seguintes requisitos:
 - Navegador web atualizado (recomenda-se o Google Chrome, Mozilla Firefox ou Microsoft Edge)
@@ -275,6 +479,7 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
    ```bash
    git clone https://github.com/msbzz/estacio.m2.n2.git
    ```
+   
    
 2. Navegue até o diretório do projeto:
    ```bash
