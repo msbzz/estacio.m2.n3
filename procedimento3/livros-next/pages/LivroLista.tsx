@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 
 import React, { useEffect, useState } from "react";
- 
 
 import { LinhaLivro } from "@/componentes/LinhaLivro";
 
-const baseURL = "http://localhost:3005/api/livros";
+import style from "../styles/LivroLista.module.css";
+
+const baseURL = "http://localhost:3015/api/livros";
 
 export const LivroLista: NextPage = () => {
   const [livros, setLivros] = useState([]);
@@ -60,7 +61,7 @@ export const LivroLista: NextPage = () => {
     //
     <div className="container">
       <main>
-        <h1>Catálogo de Livros</h1>
+        <h1 className={style.cssh1}>Catálogo de Livros</h1>
         <table className="table table-striped">
           <thead className="bg-dark text-white">
             <tr>

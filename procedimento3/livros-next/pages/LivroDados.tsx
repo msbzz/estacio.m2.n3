@@ -27,7 +27,7 @@ export default function LivroDados() {
     text: editora.nome,
   }));
 
-  const baseURL = "http://localhost:3005/api/livros";
+  const baseURL = "http://localhost:3015/api/livros";
 
   const incluirLivro = async (livro: Livro) => {
     const response = await fetch(baseURL, {

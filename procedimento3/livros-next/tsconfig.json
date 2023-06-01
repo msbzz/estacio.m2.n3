@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/editoras/index.ts", "pages/api/editoras/index.ts", "pages/index bkp.xxtsx", "pages/index bkp.xxtsx", "pages/LivroLista.txt"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/editoras/index.ts", "pages/api/editoras/index.ts", "pages/index bkp.xxtsx", "pages/index bkp.xxtsx", "pages/LivroLista.txt", "pages/api/livros/[codigo].txt", "pages/api/livros/index.txt"],
   "exclude": ["node_modules"]
 }
