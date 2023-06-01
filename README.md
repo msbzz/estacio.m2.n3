@@ -5,7 +5,7 @@
 
   Criação de front-end web com base em React JS ou Next JS, com utilização de bases de teste JSON, em memória, para ambas as plataformas.
 
-  Projeto dividido em procedimentos no qual os dois primeiros procedimentos são desenvolvidos em React JS se complementam. O ultimo em NextJS
+  Projeto dividido em procedimentos no qual os dois primeiros procedimentos são desenvolvidos em React JS se complementam. O ultimo em NextJS. Logo teremos a pasta contrndo o projeto React completo chamado de "livros-react" dentro da pasta procedimento2 e o projeto Next chamado de "livros-next" dentro da pasta procedimento3
      
   A partir dos objetivos listados abaixo, foram criadas duas versões de um front-end web, com base nas tecnologias React JS e Next JS,
 onde foi possível lidar com contextos reais de aplicação das tecnologias abordadas:
