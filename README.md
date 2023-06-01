@@ -5,7 +5,7 @@
 
   Criação de front-end web com base em React JS ou Next JS, com utilização de bases de teste JSON, em memória, para ambas as plataformas.
 
-  Projeto dividido em procedimentos no qual os dois primeiros são desenvolvidos em react se complementam. O ultimo é um projeto nextjs
+  Projeto dividido em procedimentos no qual os dois primeiros procedimentos são desenvolvidos em React JS se complementam. O ultimo é um em NextJS
      
   A partir dos objetivos listados abaixo, foram criadas duas versões de um front-end web, com base nas tecnologias React JS e Next JS,
 onde foi possível lidar com contextos reais de aplicação das tecnologias abordadas:
