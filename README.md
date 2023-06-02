@@ -20,12 +20,12 @@ Utilizar o Next JS para a definição de uma API no estilo REST, de uso interno,
 
 ## Função
 
-Seguindo a solicitação do procedimento ao final, sera obitodo uma aplicativo inicializado com um array pré devinido, estando sempre em memória .Tambem é esperado que 
-tenha um menu de navegação onde porderá se realizar o cadastro de novos itens.
+Seguindo a solicitação do procedimento, ao final, serão óbitos aplicativos inicializado com um array pré definido, estando sempre em memória .Também é esperado que
+tenha um menu de navegação onde poderá se realizar o cadastro de novos itens.
 
 Na apresentação da listagem dos itens pertencentes ao array, é possivel realizar a exclusão do mesmo
 
-obs: como se tratando de array em memoria, no caso do react, foi utilizado o conceito de "context" para que houve a integração das ações de cadastro e obtenção dos dados atualizados  
+obs: como se tratando de array em memoria, no caso do react, foi utilizado o conceito de "context" para que houve a integração das ações de cadastro e obtenção dos dados para que estes estivessem consistentes 
 
 ## Procedimentos
  
