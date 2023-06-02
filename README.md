@@ -18,7 +18,7 @@ Criar um front-end para Web completo, baseado em componentes reutilizáveis, atr
 
 Utilizar o Next JS para a definição de uma API no estilo REST, de uso interno, com acesso via função fetch, oferecida no ambiente padrão do Java Script. 
 
-## Funcionalidades
+## Procedimentos
  
   
 👉 1º Procedimento | Listagem de Livros no React JS
@@ -477,30 +477,24 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
 
 1. Clone o repositório: 
    ```bash
-   git clone https://github.com/msbzz/estacio.m2.n2.git
+   git clone https://github.com/msbzz/estacio.m2.n3.git
    ```
    
    
 2. Navegue até o diretório do projeto:
    ```bash
-   2.1 procedimento 1
+   2.1 procedimento 1,2 ou 3
    
-      cd procedimento1/exemplosjs
+      ex: cd procedimento1 
       
-   2.2. Abra o arquivo `ordenando.html` em seu navegador.
+   2.2. instale as dependencias 
+  
+      npm install ou yarn install (mac)
 
-   2.3 procedimentos 2  
+   2.3 execute o projeto  
     
-      cd procedimento2 
-    
-   2.4. Abra o arquivo `receitas.html` em seu navegador.
+      npm start (react js) ou npm run dev (next js) 
      
-   2.5 procedimentos 3
-    
-      cd procedimento3 
- 
-   2.6. Abra o arquivo `usuarios.html` em seu navegador.
-   
    ``` 
 ## Tecnologias utilizadas
 - HTML
