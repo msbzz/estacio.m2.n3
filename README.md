@@ -20,7 +20,7 @@ Utilizar o Next JS para a definição de uma API no estilo REST, de uso interno,
 
 ## Função
 
-Seguindo a solicitação do procedimento, ao final, serão óbitos aplicativos inicializado com um array pré definido, estando sempre em memória .Também é esperado que
+Seguindo a solicitação do procedimento, ao final, serão óbitos aplicativos inicializado com um array pré definido, estando sempre em memória. Também é esperado que
 tenha um menu de navegação onde poderá se realizar o cadastro de novos itens.
 
 Na apresentação da listagem dos itens pertencentes ao array, é possivel realizar a exclusão do mesmo
