@@ -10,7 +10,7 @@ import LivroLista from "./LivroLista";
 import LivroDados from "./LivroDados";
 
 import LivrariaProvider from "./context/LivrariaProvider";
-import { useState } from "react";
+import { useState,useEffect } from "react";
  
  
 
@@ -25,6 +25,10 @@ function App() {
   function handleToggle() {
     setShowMenu(!showMenu); // inverte o valor da variável de estado
   }
+
+  useEffect(()=>{
+    setActiveTab("catalogo")
+  },[])
 
   return (
     <div className="App">
