@@ -54,7 +54,7 @@ básica do projeto:
     d) Criar, no folder controle, "ControleEditora.ts" e "ControleLivros.ts"
 
     e) Incluir as dependências do Bootstrap no arquivo index.html, encontrado
-no folder public
+        no folder public
 
     f) Criar os arquivos "LivroDados.js" e "LivroLista.js" (JavaScript) em src
 
@@ -89,6 +89,7 @@ numérico, e retornando o nome da editora, através de uma operação filter
 sobre o vetor editoras
 
 Codifique o controlador de livros, no arquivo ControleLivros.ts:
+    
     a) Importar a classe Livro
 
     b) Definir a variável livros, como Array<Livro>, contendo ao menos três
@@ -108,7 +109,8 @@ encontrar o índice do livro com o código fornecido, através de findIndex, e
 removê-lo com o uso de splice
 
 Codifique o componente LivroLista, no arquivo LivroLista.js:
-    a) Instanciar um controlador de livros, com o nome controleLivro, e um de
+   
+   a) Instanciar um controlador de livros, com o nome controleLivro, e um de
 editoras, com o nome controleEditora
 
     b) Definir o componente auxiliar LinhaLivro, com parâmetro props, para a
@@ -159,6 +161,7 @@ a funcionalidade da exclusão de livro.
 👉 2º Procedimento | Página de Cadastro e Navegação no React JS
 
 Ajuste as rotas de navegação do sistema livros-react:
+    
     a) Adicionar o pacote de navegação com npm instal react-router-dom
 
     b) Definir o componente LivroDados, em LivroDados.js, inicialmente com o
@@ -181,7 +184,8 @@ Ajuste as características para obter uma página como o exemplo abaixo:
 
 
 Implemente o componente LivroDados, no arquivo LivroDados.js:
-    a) Instanciar um controlador de livros, com o nome controleLivro, e um de
+   
+   a) Instanciar um controlador de livros, com o nome controleLivro, e um de
 editoras, com o nome controleEditora
 
     b) Em LivroDados, definir o vetor opcoes, invocando o método getEditoras,
@@ -225,7 +229,8 @@ a nova funcionalidade de inclusão de livros.
 👉 3º Procedimento | Criação do Aplicativo com Next JS
 
 Crie o aplicativo e configure o ambiente:
-    a) Executar o comando npx create-next-app livros-next  --typescript
+   
+   a) Executar o comando npx create-next-app livros-next  --typescript
 
     b) Entrar no diretório do projeto criado, executando cd livros-next
 
@@ -250,7 +255,8 @@ A estrutura do projeto deverá ficar como o exemplo abaixo:
 
 
 Implemente a API de gerenciamento de editoras via HTTP:
-    a) Codificar o arquivo index.ts, no diretório pages/api/editoras, iniciando
+   
+   a) Codificar o arquivo index.ts, no diretório pages/api/editoras, iniciando
 com a definição de uma instância exportável de ControleEditora, com o nome
 controleEditora
 
@@ -281,7 +287,8 @@ acesso e recuperado via req.query, convertido para number
 ocorrida no servidor
 
 Teste a nova API
-    a) Iniciar a execução do aplicativo através do comando npm run dev
+   
+   a) Iniciar a execução do aplicativo através do comando npm run dev
 
     b) Abrir o endereço http://localhost:3000/api/editoras no navegador
 
@@ -333,6 +340,7 @@ no formato JSON, e opcionalmente testar os demais métodos (POST e
 DELETE) via Postman, Boomerang, ou outra ferramenta para envio de
 requisições
 Habilite o Bootstrap no aplicativo Next JS:
+    
     a) Parar o aplicativo livros-next, caso esteja em execução, e executar o
 comando npm install bootstrap
 
@@ -343,6 +351,7 @@ componentes
 ![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/a46f38fe-28c1-469e-a36c-5b8588be6dff)
 
 Implemente o componente LinhaLivro, no arquivo LinhaLivro.tsx:
+    
     a) Iniciar com a definição de uma instância de ControleEditora, com o nome
 controleEditora, utilizado internamente para diminuir a quantidade de
 chamadas assíncronas, já que os dados de editoras não são dinâmicos
@@ -363,6 +372,7 @@ Crie o arquivo LivroLista.tsx, no diretório pages, com o conteúdo seguinte:
  ![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/9d231ab3-e7f2-444e-bb44-2928ae7e0377)
  
 Implemente o componente Menu.tsx, de acordo com as instruções seguintes:
+   
     a) Definir o componente com export const Menu: React.FC = () => { }
 
     b) Retornar o menu de navegação, com tag nav, formatado pelo BootStrap
@@ -373,6 +383,7 @@ Implemente o componente Menu.tsx, de acordo com as instruções seguintes:
 LivroLista e LivroDados, como opções do menu de navegação
 
 Altere o componente Home, no arquivo index.tsx:
+    
     a) No retorno, manter a div inicial, com classe CSS container
 
     b) No componente Head, alterar title para "Loja Next"
@@ -390,6 +401,7 @@ Ajuste as características para obter uma página como o exemplo abaixo:
 
  
 Implemente o componente LivroLista, no arquivo LivroLista.tsx:
+    
     a) Importar os estilos com import styles from '../styles/Home.module.css'
 
     b) Definir uma constante com o nome baseURL, do tipo texto, utilizando o
@@ -426,6 +438,7 @@ excluir invocando o método excluir de LivroLista, com a passagem do código do
 livro corrente, e key associado ao código do livro
 
 Implemente o componente LivroDados, no arquivo LivroDados.tsx
+    
     a) Importar os estilos com import styles from '../styles/Home.module.css'
 
     b) Definir um objeto do tipo ControleEditora, com o nome controleEditora
