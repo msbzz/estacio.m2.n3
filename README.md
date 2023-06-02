@@ -18,6 +18,15 @@ Criar um front-end para Web completo, baseado em componentes reutilizáveis, atr
 
 Utilizar o Next JS para a definição de uma API no estilo REST, de uso interno, com acesso via função fetch, oferecida no ambiente padrão do Java Script. 
 
+## Função
+
+Seguindo a solicitação do procedimento ao final, sera obitodo uma aplicativo inicializado com um array pré devinido, estando sempre em memória .Tambem é esperado que 
+tenha um menu de navegação onde porderá se realizar o cadastro de novos itens.
+
+Na apresentação da listagem dos itens pertencentes ao array, é possivel realizar a exclusão do mesmo
+
+obs: como se tratando de array em memoria, no caso do react, foi utilizado o conceito de "context" para que houve a integração das ações de cadastro e obtenção dos dados atualizados  
+
 ## Procedimentos
  
   
@@ -501,35 +510,25 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
 - Bootstrap
 - CSS
 - JavaScript
+- React JS
+- Next JS 
 
 ## Estrutura de diretórios
 A estrutura de diretórios do projeto é organizada da seguinte forma:
 
 ```
-nome-do-repositorio/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── img/
-│   └── imagem1.jpg
-│   └── imagem2.png
+livros-react/
+├── nodes_modules
+├── public
+├── src/
+│   └── components
+│   └── context
+│   └── controle
+│   └── modelo
+│   └── stykes  
+├── package.json
+├── package-lock.json
+├── tsconfig.json 
 └── README.md
 ```
-
-## Contribuição
-Contribuições são bem-vindas! Se você quiser colaborar com este projeto, siga as etapas abaixo:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua nova feature (`git checkout -b feature/nova-feature`)
-3. Faça o commit das suas alterações (`git commit -am 'Adicione uma nova feature'`)
-4. Envie para o repositório remoto (`git push origin feature/nova-feature`)
-5. Abra uma Pull Request
-
-## Licença
-Este projeto está licenciado sob a [descreva a licença utilizada]. Consulte o arquivo [LICENSE](LICENSE) para obter mais informações.
-
-## Contato
-- [Seu nome](mailto:seu-email@exemplo.com)
-- [Link do projeto](https://github.com/seu-usuario/nome-do-repositorio)
+ 
