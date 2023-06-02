@@ -33,6 +33,7 @@ obs: como se tratando de array em memoria, no caso do react, foi utilizado o con
 👉 1º Procedimento | Listagem de Livros no React JS
 
 Crie o projeto e inicie o ambiente de desenvolvimento:
+    
     a) Abrir a linha de comandos
 
     b) Executar npx create-react-app livros-react --template typescript
@@ -43,6 +44,7 @@ Crie o projeto e inicie o ambiente de desenvolvimento:
 
 No ambiente de desenvolvimento do Visual Studio Code, criar a estrutura
 básica do projeto:
+   
     a) Adicionar um folder com o nome modelo
 
     b) Criar, no folder modelo, os arquivos "Editora.ts" e "Livro.ts" (TypeScript)
@@ -62,6 +64,7 @@ A estrutura do projeto deverá ficar como o exemplo abaixo:
 
 
 Codifique as entidades do sistema (Editora e Livro):
+    
     a) No arquivo Editora.ts, criar a classe Editora, com os campos codEditora,
 numérico, e nome, do tipo texto
 
@@ -70,6 +73,7 @@ codEditora, numéricos, título e resumo, ambos do tipo texto, e autores, como
 um vetor de texto
 
 Codifique o controlador de editoras, no arquivo ControleEditora.ts:
+    
     a) Importar a classe Editora
 
     b) Definir a variável editoras, como Array<Editora>, contendo ao menos três
