@@ -97,7 +97,7 @@ Codifique o controlador de livros, no arquivo ControleLivros.ts:
 
 Codifique o componente LivroLista, no arquivo LivroLista.js:
    
-   a) Instanciar um controlador de livros, com o nome controleLivro, e um de editoras, com o nome controleEditora
+    a) Instanciar um controlador de livros, com o nome controleLivro, e um de editoras, com o nome controleEditora
 
     b) Definir o componente auxiliar LinhaLivro, com parâmetro props, para a recepção dos atributos livro e excluir, a partir da aplicação do seletor
 
