@@ -520,5 +520,31 @@ livros-react/
 ├── package-lock.json
 ├── tsconfig.json 
 └── README.md
+ 
+ 
+ 
+ livros-next/
+├── nodes_modules
+├── classes
+├── componentes
+├── pages/
+│   └── api
+│       └── editoras
+│       └── livros 
+│   └── index.tsx
+│   └── LivrosDados.tsx
+│   └── LivroLista.tsx  
+├── public
+├── styles
+├── eslintrc.json 
+├── next.config.js
+├── next-env.d.ts 
+├── package.json
+├── package-lock.json
+├── tsconfig.json 
+└── README.md
+ 
+ 
+ 
 ```
  
