@@ -506,7 +506,7 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
 ## Estrutura de diretórios
 A estrutura de diretórios do projeto é organizada da seguinte forma:
 
-```
+```bash
 livros-react/
 ├── nodes_modules
 ├── public
@@ -520,8 +520,9 @@ livros-react/
 ├── package-lock.json
 ├── tsconfig.json 
 └── README.md
+``` 
  
- 
+```bash
  
  livros-next/
 ├── nodes_modules
@@ -543,6 +544,8 @@ livros-react/
 ├── package-lock.json
 ├── tsconfig.json 
 └── README.md
+
+ ``` 
  
  
  
