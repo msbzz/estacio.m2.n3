@@ -22,7 +22,7 @@ Seguindo a solicitação do procedimento, ao final, serão apresentados dois apl
 
 Na apresentação da listagem deve ter um icone para cada elemento onde deve ser possivel realizar a exclusão 
 
-obs: como se tratando de array em memoria, no caso do react, foi utilizado o conceito de "context" para que houvesse a integração das ações de cadastro e obtenção dos dados devido a estes se encontrarem em modulos separados. Com isso  a consistencia dos dados foi mantida. No caso do projeto Next JS, optei usar um unico modulo HTTP na pasta de PAGES/API sendo assim a instância da classe contendo o array seria unica 
+obs: como se tratando de array em memoria, no caso do react, foi utilizado o conceito de "context" para que houvesse a integração das ações de cadastro e obtenção dos dados devido a estes, se encontrarem em módulos separados. Com isso, nesse primeiro projeto, a consistência dos dados foi mantida. No caso do projeto Next JS, optei usar um único modulo HTTP na pasta de PAGES/API fazendo assim, se usar uma única instância da classe que define o array.   
 
 O  Projeto  projeto React JS completo esta na pasta chamada de **_"livros-react" dentro da pasta "procedimento2"_** e o projeto Next na pasta chamada de **_"livros-next" dentro da pasta "procedimento3"_**
 
