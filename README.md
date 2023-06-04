@@ -4,9 +4,7 @@
 ## Descrição
 
   Criação de front-end web com base em React JS ou Next JS, com utilização de bases de teste JSON, em memória, para ambas as plataformas.
-
-  Os Projetos são divididos em procedimentos no qual os dois primeiros se referem ao projeto React JS, e o ultimo ao em Next JS. Sendo assim teremos a pasta contendo o projeto React completo chamado de **_"livros-react" dentro da pasta procedimento2_** e o projeto Next chamado de **_"livros-next" dentro da pasta procedimento3_**
-     
+   
   A partir dos objetivos listados abaixo, foram criadas duas versões de um front-end web, com base nas tecnologias React JS e Next JS,
 onde foi possível lidar com contextos reais de aplicação das tecnologias abordadas:
 
@@ -18,15 +16,17 @@ Criar um front-end para Web completo, baseado em componentes reutilizáveis, atr
 
 Utilizar o Next JS para a definição de uma API no estilo REST, de uso interno, com acesso via função fetch, oferecida no ambiente padrão do Java Script. 
 
-## Função
+## Funcionalidade
 
-Seguindo a solicitação do procedimento, ao final, serão apresentados aplicativos inicializado com um array pré definido, estando sempre em memória. Também é esperado que
-tenha um menu de navegação onde poderá se realizar o cadastro de novos itens.
+Seguindo a solicitação do procedimento, ao final, serão apresentados dois aplicativos que serão inicializados com um array, já pré definido, estando sempre em memória no qual é esperado que se tenha um modulo principal de apresentação e outro de cadastro.
 
-Na apresentação da listagem dos itens pertencentes ao array, é possivel realizar a exclusão do mesmo
+Na apresentação da listagem deve ter um icone para cada elemento onde deve ser possivel realizar a exclusão 
 
 obs: como se tratando de array em memoria, no caso do react, foi utilizado o conceito de "context" para que houve a integração das ações de cadastro e obtenção dos dados para que estes estivessem consistentes, no caso do projeto Next JS optei usar um modulo HTTP unico na pasta de PAGES/API 
 
+O  Projeto  projeto React JS completo esta na pasta chamada de **_"livros-react" dentro da pasta procedimento2_** e o projeto Next na pasta chamada de **_"livros-next" dentro da pasta procedimento3_**
+
+  
 ## Procedimentos
  
   
