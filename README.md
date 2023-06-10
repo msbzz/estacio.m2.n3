@@ -70,49 +70,9 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
 - Next JS 
 
 ## Estrutura de diretórios
-A estrutura de diretórios do projeto é organizada da seguinte forma:
+ 
+ ![image](https://github.com/msbzz/estacio.m2.n3/assets/44148209/157603d6-a7ce-48ff-943a-4fb634e70012)
 
-```bash
-livros-react/
-├── nodes_modules
-├── public
-├── src/
-│   └── components
-│   └── context
-│   └── controle
-│   └── modelo
-│   └── stykes  
-├── package.json
-├── package-lock.json
-├── tsconfig.json 
-└── README.md
-``` 
- 
-```bash
- 
- livros-next/
-├── nodes_modules
-├── classes
-├── componentes
-├── pages/
-│   └── api
-│       └── editoras
-│       └── livros 
-│   └── index.tsx
-│   └── LivrosDados.tsx
-│   └── LivroLista.tsx  
-├── public
-├── styles
-├── eslintrc.json 
-├── next.config.js
-├── next-env.d.ts 
-├── package.json
-├── package-lock.json
-├── tsconfig.json 
-└── README.md
-
- ``` 
- 
  
  
  
